@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+*.pyc
+credentials/
+*.xlsx
+**/__pycache__/
+.ipynbcheckpoints/
