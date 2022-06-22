@@ -65,8 +65,7 @@ class Experiment:
         """
         if len(self.placement_id) > 0:
 
-            logger.info(f'Adding arms in the environment id: {self.id} for the '
-                        f'{self.policy_algorithm.__name__} algorithm')
+            logger.info(f'Grocery : {self.id} ')
             self.num_placement_id_added = 0
             for placement_id in self.placement_id:
                 # Query the historical consumption based on the criteria setup in the experiment
@@ -79,7 +78,7 @@ class Experiment:
                 # Create discrete arm for each placement id
                 try:
 
-                    logger.info(f'-- Adding an Arm with placement id {placement_id} for id {self.id}')
+                    # logger.info(f'-- Adding an Arm with placement id {placement_id} for id {self.id}')
                     self.arms.append(DiscreteArm(placement_id, self.consumption))
                     logger.debug(f' -- Values of appended arm {DiscreteArm(placement_id, self.consumption)}')
                     self.num_placement_id_added += 1
